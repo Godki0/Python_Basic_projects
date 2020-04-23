@@ -9,13 +9,9 @@ path = "C:\\Users\\burro\\Desktop\\Python Projects\\Python_Basic_projects\\Pytho
 list_dir = os.listdir(path)
 for filename in list_dir:
     if filename.endswith(".txt"):
-        fPath = "list_dir"
-        fName = "filename"
-        abPath = os.path.join(fPath, fName)
-        print(filename)
+        abPath = os.path.join(path, filename)
+        modification_time = os.path.getmtime(abPath)
+        local_time = time.ctime(modification_time)
+        print(filename, modification_time,"Last modification time(Local time):", local_time)
 
-modification_time = os.path.getmtime(path)
-print(modification_time)
 
-local_time = time.ctime(modification_time)
-print("Last modification time(Local time):", local_time)
