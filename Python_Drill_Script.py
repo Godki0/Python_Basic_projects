@@ -2,21 +2,28 @@
 import os
 import time
 
-fName = "6.txt"
-
-fPath = "C:\\Python_Drill\\"
-
-abPath = os.path.join(fPath, fName)
-print(abPath)
-
 
 path = "C:\\Users\\burro\\Desktop\\Python Projects\\Python_Basic_projects\\Python_Drill"
 
 
 list_dir = os.listdir(path)
-for file in list_dir:
-    print(file)
+for filename in list_dir:
+    if filename.endswith(".txt"):
+        print(filename)
 
+f1Name = "1.txt"
+
+f1Path = "C: \\Python_Drill\\"
+
+abPath = os.path.join(f1Path, f1Name)
+print(abPath)
+
+f2Name = "2.txt"
+
+f2Path = "C: \\Python_Drill\\"
+
+cdPath = os.path.join(f2Path, f2Name)
+print(cdPath)
 
 modification_time = os.path.getmtime(path)
 print(modification_time)
