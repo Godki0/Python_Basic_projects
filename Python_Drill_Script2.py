@@ -22,7 +22,7 @@ for filename in fileList:
         with conn:
             cur = conn.cursor()
             cur.execute("INSERT INTO tbl_file(Col_txt) VALUES (?)", \
-                        ('filename'))
+                        (filename,))
             conn.commit()
         print(filename)
 
