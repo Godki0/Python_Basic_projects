@@ -27,9 +27,9 @@ def load_gui(self):
     self.btn_pushdir.grid(row=2,column=0,padx=(30,0),pady=(30,0),sticky=S)
 
 
-    self.txt_bar = tk.Entry(self.master,text='')
+    self.txt_bar = tk.Entry(self.master,text='',width=50)
     self.txt_bar.grid(row=0,column=1,columnspan=3,padx=(40,0),pady=(0,0),sticky=S)
-    self.txt_bar2 = tk.Entry(self.master,text='')
+    self.txt_bar2 = tk.Entry(self.master,text='',width=50)
     self.txt_bar2.grid(row=1,column=1,columnspan=3,padx=(40,0),pady=(0,0),sticky=S)                              
 
 
