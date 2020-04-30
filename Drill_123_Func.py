@@ -1,11 +1,14 @@
 from tkinter import *
-import Tkinter as tk
-import Tkinter.filedialog
+import tkinter as tk
+import tkinter.filedialog
 
 import Drill_123_Main
 import Drill_123_Gui
 
 
 def openDir(self):
-    self.Dir = tkFileDialog.askdirectory()
-    print (self.dir)
+    self.Dir = tkinter.filedialog.askdirectory()
+    self.txt_bar.delete(0,END)
+    self.txt_bar.insert(0,self.Dir)
+    print(self.Dir)
+    
